@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
+import Image from "next/image";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -49,6 +50,7 @@ export default function Page() {
           </Markdown>
         </BlurFade>
       </section>
+
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
@@ -188,6 +190,32 @@ export default function Page() {
           </BlurFade>
         </div>
       </section>
+
+      <section id="gallery">
+        <div className="flex min-h-0 flex-col gap-y-3">
+          <BlurFade delay={BLUR_FADE_DELAY * 5}>
+            <h2 className="text-xl font-bold mb-3">Gallery</h2>
+            <div className="flex flex-wrap gap-2">
+              {DATA.gallery.map((gallery, id) => (
+                <BlurFade key={gallery.href} delay={BLUR_FADE_DELAY * 6 + id * 0.05}>
+                  <Link href={gallery.href}>
+                    <div className="w-48 h-48 mt-2 overflow-hidden rounded-lg">
+                      <Image
+                        src={gallery.image}
+                        alt={gallery.href}
+                        width={100}
+                        height={100}
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                  </Link>
+                </BlurFade>
+              ))}
+            </div>
+          </BlurFade>
+        </div>
+      </section>
+
       <section id="contact">
         <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>

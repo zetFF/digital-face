@@ -12,6 +12,34 @@ export const DATA = {
   summary:
     "I'm a website developer and user interface designer. Currently, I work as a self-employed frontend developer, specializing in creating impressive websites that boost business. am a Web Developer who focuses on Frontend and UI UX Designer. I learned about Frontend art world since 2022 until now. I am able to use JavaScript Framework technology and UI Library.",
   avatarUrl: "/zet.png",
+
+gallery: [
+  {
+    href: "/blurry-bass.jpg",
+    image: "/blurry-bass.jpg",
+  },
+  {
+    href: "/red-tshirt.jpg",
+    image: "/red-tshirt.jpg",
+  },
+  {
+    href: "/image.png",
+    image: "/image.png",
+  },
+  {
+    href: "/smoke-shadow.jpg",
+    image: "/smoke-shadow.jpg",
+  },
+  {
+    href: "/zet.jpg",
+    image: "/zet.jpg",
+  },
+  {
+    href: "/graduate.jpg",
+    image: "/graduate.jpg",
+  },
+],
+
   skills: [
     "React",
     "Next.js",
