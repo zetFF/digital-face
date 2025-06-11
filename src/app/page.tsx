@@ -194,17 +194,17 @@ export default function Page() {
       <section id="gallery">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
-            <h2 className="text-xl font-bold mb-3">Gallery</h2>
-            <div className="flex flex-wrap gap-2">
+            <h2 className="text-xl font-bold mb-5">Gallery</h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3">
               {DATA.gallery.map((gallery, id) => (
                 <BlurFade key={gallery.href} delay={BLUR_FADE_DELAY * 6 + id * 0.05}>
                   <Link href={gallery.href}>
-                    <div className="w-48 h-48 mt-2 overflow-hidden rounded-lg">
+                    <div className="w-full aspect-square overflow-hidden rounded-lg">
                       <Image
                         src={gallery.image}
                         alt={gallery.href}
-                        width={100}
-                        height={100}
+                        width={500}
+                        height={500}
                         className="h-full w-full object-cover"
                       />
                     </div>
@@ -215,6 +215,7 @@ export default function Page() {
           </BlurFade>
         </div>
       </section>
+
 
       <section id="contact">
         <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
